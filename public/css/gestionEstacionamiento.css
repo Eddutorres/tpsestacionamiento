@@ -1,0 +1,244 @@
+.menu-nav-est {
+    position: relative;
+    margin-top: 25px;
+    width: auto;
+    height: fit-content;
+}
+
+.naveg-reg-veh {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.reg-veh {
+    text-decoration: none;
+    color: #e4e4e4;
+}
+
+.sub-menu-reg {
+    padding: 15px;
+    margin-bottom: 5px;
+}
+
+.sub-menu-reg a {
+    padding: 15px;
+    background-color: #1778b8c7;
+    margin-right: 5px;
+}
+
+
+/***********************************/
+
+
+/***********************************/
+
+.contenido-usuario-reg {
+    width: 100%;
+    display: flex;
+    margin: 13px 0;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+h2 {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.form-registro-veh {
+    width: 100%;
+}
+
+.estacionamiento-igreso-form {
+    background-color: #bdb8b8;
+    padding: 5px 0;
+    border: solid 1px;
+    margin: 6px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.button-reg-veh {
+    background: #333333;
+    width: auto;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+}
+
+.estacionamiento-igreso-form .button-reg-veh {
+    position: relative;
+    margin: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 11px;
+    margin-right: 10px;
+}
+
+.estacionamiento-igreso-form input {
+    background: #f2f2f2;
+    border: solid 1px;
+    margin: 6px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.comboreg {
+    background: #f2f2f2;
+    border: solid 1px;
+    margin: 6px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+/*
+.caja-reg-veh{
+    /* display: flex; 
+}
+*/
+
+@media (min-width:1024px) {
+    .estacionamiento-igreso-form {
+        background: #bdb8b8;
+        width: fit-content;
+        border: solid 1px;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 16px;
+        text-align: right;
+    }
+    .estacionamiento-igreso-form .button-reg-veh {
+        position: relative;
+        margin: 1px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 11px;
+        margin-right: 10px;
+    }
+    .contenido-usuario-reg {
+        width: fit-content;
+    }
+    .caja-reg-veh {
+        display: flex;
+    }
+    .grilla-reg-ing {
+        border: 1px;
+        display: inline-block;
+        width: auto;
+        margin: 0 20px;
+        text-align: justify;
+    }
+}
+
+
+/***********************************/
+
+
+/***********************************/
+
+
+/***********************************/
+
+
+/***********************************/
+
+.grilla-reg-ing {
+    /* border: 2px solid green; */
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.estacionamientos {
+    margin-top: 10px;
+    margin-left: 25px;
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #7d7373;
+    width: 400px;
+    height: auto;
+}
+
+.contador {
+    /* border: 2px solid red; */
+    width: fit-content;
+    margin-top: 10px ;
+    margin-left: 30px;
+}
+
+.row {
+    line-height: 0;
+}
+
+.calle {
+    height: 50px;
+    width: 50px;
+    background-color: #7d7373;
+    display: inline-block;
+}
+
+.disponible {
+    border-bottom: 4px solid #333333;
+    border-top: 4px solid #333333;
+    background-image: url('');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.ocupado {
+    border-bottom: 4px solid #333333;
+    background-image: url('../img/car_top_h.png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    padding: 5px;
+}
+
+
+
+.texto {
+    display: block;
+    width: 400px;
+    height: 300px;
+}
+
+@media (min-width:1024px) {
+    .grilla-reg-ing {
+        /* border: 2px solid green; */
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .estacionamientos {
+        margin-top: 10px;
+        margin-left: 25px;
+        text-align: center;
+        padding: 15px;
+        border: 2px solid #7d7373;
+        width: 400px;
+        height: auto;
+    }
+    
+    .contador {
+        /* border: 2px solid red; */
+        width: 50%;
+    }
+}
