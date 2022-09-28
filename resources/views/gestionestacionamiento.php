@@ -14,11 +14,28 @@
     <main class="contenido-cuerpo">
         <section class="menu-nav-est">
             <div class="naveg-reg-veh">
-                <div class="sub-menu-reg">
-                    <button class="button-reg-veh" onclick=''>Registro Salida</button>
+                <!-- modal 1 -->
+                <div>
+                    <button class="button-modal-reg-veh" id="open">Registrar salida</button>
+                    <div id="modal_container" class="modal-container">
+                        <div class="modal">
+                            <h1>Registro salida</h1>
+                            <label>Buscar</label>
+                            <input type="text" placeholder="Rut">
+                            <button class="button-modal-reg-veh" id="close">Cerrar</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="sub-menu-reg">
-                    <button class="button-reg-veh" onclick=''>Cambiar de Estacionamiento</button>
+                
+                <!-- modal 2 -->
+                <div>
+                    <button class="button-modal-reg-veh" id="open2">Modificar</button>
+                    <div id="modal_container2" class="modal-container2">
+                        <div class="modal2">
+                            <h1>Modificar Estacionamiento</h1>
+                            <button class="button-modal-reg-veh" id="close2">Cerrar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -101,8 +118,8 @@
                 </div>
             </section>
         </div>
-        <script src="../js/estacionamiento.js">
-        </script>
+        <script src="../js/estacionamiento.js"></script>
+        <script src="../js/funcionBotones.js"></script>
     </main>
     <!--================FOOTER======================-->
     <?php
