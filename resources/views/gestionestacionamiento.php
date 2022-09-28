@@ -15,11 +15,10 @@
         <section class="menu-nav-est">
             <div class="naveg-reg-veh">
                 <div class="sub-menu-reg">
-                    <a class="reg-veh" href="">Registro Salida</a>
+                    <button class="button-reg-veh" onclick=''>Registro Salida</button>
                 </div>
-
                 <div class="sub-menu-reg">
-                    <a class="reg-veh" href="">Cambiar de Estacionamiento</a>
+                    <button class="button-reg-veh" onclick=''>Cambiar de Estacionamiento</button>
                 </div>
             </div>
         </section>
