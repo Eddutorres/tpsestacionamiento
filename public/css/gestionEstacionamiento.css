@@ -1,13 +1,15 @@
 .menu-nav-est {
     position: relative;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     width: auto;
     height: fit-content;
 }
-
-.naveg-reg-veh {
+.menu-nav-est{
+    text-align: center;
+}
+.button-modal {
     position: static;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 15px;
@@ -74,7 +76,7 @@ h2 {
 }
 
 .estacionamiento-igreso-form .button-reg-veh {
-    position: relative;
+    /* position: relative; */
     margin: 15px;
     padding: 15px;
     box-sizing: border-box;
@@ -202,7 +204,7 @@ h2 {
 
 .ocupado {
     border-bottom: 4px solid #333333;
-    background-image: url('../img/car_top_h.png');
+    background-image: url('../media/car_top_h.png');
     background-size: cover;
     height: 50px;
     width: 50px;

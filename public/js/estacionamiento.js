@@ -2,12 +2,15 @@
 //////MOSTRAR ESTACIONAMIENTO COMBOBOX
 
 let estacionamientos = ["Antonio Varas", "Prat"];
-let sectores = [1, 2, 3, 4, 5];
+let sectores = [01, 02, 03, 04, 05 ];
 
 let combobox1 = document.getElementById("combobox1");
 let combobox2 = document.getElementById("combobox2");
 
+
+// funcion crear listado de formulario sector
 function Recorrer(combobox, valores) {
+    Borrar();
     combobox2.innerHTML = "";
     for (let index of valores) {
         combobox.innerHTML += `
@@ -15,6 +18,17 @@ function Recorrer(combobox, valores) {
         `;
     }
 }
+// FUNCION QUE OCULTA TODOS LOS PLANOS DE ESTACIONAMIENTOS
+function Borrar(){
+// recorro los sectores y los oculto todos
+for (let index = 0; index < sectores.length; index++) {
+    const element = sectores[index];
+        document.getElementById('sector'+element).style.display = "none";
+        console.log('ocultando plano',element);       
+    }
+}
+
+
 
 function llenarEst() {
     Recorrer(combobox1, estacionamientos);
@@ -23,35 +37,43 @@ llenarEst();
 
 combobox1.addEventListener("change", (e) => {
     let dato = e.target.value;
+    
+    Borrar();
 
     switch (dato) {
+    
         case "Antonio Varas":
             Recorrer(combobox2, sectores.slice(0, 5));
+            combobox2.addEventListener("change", (e) => {
+                
+                Borrar();
+
+                let num = e.target.value;
+                console.log('let=', num);
+                console.log('A varas sector'+num);
+                document.getElementById('sector'+num).style.display = "block";
+
+    });
             break;
+
+
         case "Prat":
             Recorrer(combobox2, sectores.slice(0, 3));
+            combobox2.addEventListener("change", (e) => {
+                Borrar();
+
+                let num = e.target.value;
+                console.log('let=', num);
+                console.log('Prat sector'+num);
+                document.getElementById('sector'+num).style.display = "block";
+                
+
+        });
             break;
         default:
             break;
     }
 });
-
-
-// function mostrarPlano() {
-
-// var plano1 = document.getElementById('sector1').style.display = "none";
-var plano2 = document.getElementById('sector2').style.display = "none";
-var plano3 = document.getElementById('sector3').style.display = "none";
-var plano4 = document.getElementById('sector4').style.display = "none";
-var plano5 = document.getElementById('sector5').style.display = "none";
-
-//     if (estacionamientos == 'Antonio Varas' && sectores == 1) {
-
-//         plano1 = document.getElementById('sector1').style.display = "block";
-
-//     };
-// };
-// mostrarPlano();
 
 
 
@@ -231,4 +253,30 @@ function drawSector1prat() {
     }
     document.getElementById('sector1prat').innerHTML = output;
 }
-drawSector1prat();
+// drawSector1prat();
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------
+// -----------------------------------------------------------------------
+// -----------------------------------------------------------------------
+
+
+
+// // funcion mostrar solo el sector seleccionado
+function Mostrar(numero){
+    //document.getElementById(numero).style.display = "block";
+    console.log("aca funcion mostrar", numero);
+}
+
+combobox2.addEventListener("change", (e) => {
+    let sectorSelected = parseInt(e.target.value);
+        console.log("aca add eventlistener", sectorSelected);
+        Mostrar(sectorSelected);
+})

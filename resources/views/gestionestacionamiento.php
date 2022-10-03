@@ -1,36 +1,86 @@
-<?php
-    include_once("encabezado.php");
-?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fontello.css">
+
+    <title>TPS Parking</title>
+</head>
+
 <body>
     <!--============================================-->
     <!--==============CABECERA======================-->
     <!--============================================-->
-    <?php
-    include_once("headerMenu.php");
-    ?>
+    <header class="header">
+        <div class="contenedor">
+            <img class="logo" src="../img/tps_web2021.png" alt="logo">
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
+            <nav class="naveg">
+                <a class="navegador" href="#">Gestion de Estacionamientos</a>
+                <a class="navegador" href="./gestionUsuario.html">Administrador de usuario</a>
+                <a class="navegador" href="./reportes.html">Reportes</a>
+                <button class="cerrar_sesion" id="cerrar_sesion">Cerrar sesion</button>
+            </nav>
+        </div>
+    </header>
     <!--============================================-->
     <!--================CUERPO======================-->
     <!--============================================-->
     <main class="contenido-cuerpo">
         <section class="menu-nav-est">
             <div class="naveg-reg-veh">
-                <!-- modal 1 -->
-                <div>
+                
+                <div class="button-modal">
                     <button class="button-modal-reg-veh" id="open">Registrar salida</button>
-                    <div id="modal_container" class="modal-container">
+                    <div id="modal_container" class="modal_container_salida">
                         <div class="modal">
-                            <h1>Registro salida</h1>
-                            <label>Buscar</label>
-                            <input type="text" placeholder="Rut">
-                            <button class="button-modal-reg-veh" id="close">Cerrar</button>
+                            <h1 class="h1-modal">Registro salida</h1>
+                            
+                            <div class="reg-busqueda">
+                                <label>Buscar patente</label>
+                                <input class="input_reg_salida"  type="text" placeholder="XS6452">
+                                <button class="button-modal-reg-veh">Buscar</button>
+                            </div>
+
+                            <hr>
+
+                            <div class="reg-busqueda">
+                                <label>Hora Entrada: </label>
+                                <input class="input_reg_salida" type="text">
+                            </div>
+
+                            <div class="reg-busqueda">
+                                <label>Nombre: </label>
+                                <input class="input_reg_salida" type="text">
+                            </div>
+
+                            <div class="reg-busqueda">
+                                <label>Rut: </label>
+                                <input class="input_reg_salida" type="text">
+                            </div>
+
+                            <div class="reg-busqueda">
+                                <label for="">Hora salida: </label>
+                                <input class="input_reg_salida" type="time">
+                            </div>
+
+                            <div class="reg-busqueda-button">
+                                <button class="button-modal-reg-veh" id="close">Registrar</button>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
                 
                 <!-- modal 2 -->
-                <div>
+                <div class="button-modal">
                     <button class="button-modal-reg-veh" id="open2">Modificar</button>
-                    <div id="modal_container2" class="modal-container2">
+                    <div id="modal_container2" class="modal_container_modifica">
                         <div class="modal2">
                             <h1>Modificar Estacionamiento</h1>
                             <button class="button-modal-reg-veh" id="close2">Cerrar</button>
@@ -118,13 +168,17 @@
                 </div>
             </section>
         </div>
-        <script src="../js/estacionamiento.js"></script>
+
+        <script src="../js/estacionamiento.js">
+        </script>
         <script src="../js/funcionBotones.js"></script>
     </main>
-    <!--================FOOTER======================-->
-    <?php
-        include_once("footer.php");
-    ?>
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="contacto">
+            <p><strong>@ TPSV Terminal Pacifico Sur Valparaíso Chile</strong></p>
+        </div>
+    </footer>
 
 </body>
 
