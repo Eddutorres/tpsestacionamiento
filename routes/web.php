@@ -1,25 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('tpsLogin');
-});
+});*/
 
-Route::get('/gestionUsuario', function () {
+/*Route::get('/gestionUsuario', function () {
     return view('gestionUsuario');
-});
+});*/
 
 Route::get('/gestionestacionamiento', function(){
     return view('gestionestacionamiento');
@@ -28,3 +19,9 @@ Route::get('/gestionestacionamiento', function(){
 Route::get('/reportes', function(){
     return view('reportes');
 });
+
+Route::get('/', [SessionController::class, 'create'])->name('tpsLogin.index');
+Route::post('/', [SessionController::class, 'store'])->name('tpsLogin.store');
+
+Route::get('/gestionUsuario', [RegisterController::class, 'create'])->name('gestionUsuario.index');
+Route::post('/gestionUsuario', [RegisterController::class, 'store'])->name('gestionUsuario.store');
