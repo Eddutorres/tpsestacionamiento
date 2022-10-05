@@ -111,7 +111,7 @@ include_once("encabezado.php");
     </main>
     <!--FOOTER-->
     <?php
-    include_once('footer.php') 
+    include_once('footer.php')
     ?>
 </body>
 
