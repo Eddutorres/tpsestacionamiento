@@ -202,12 +202,6 @@ header label {
     cursor: pointer;
 }
 
-
-/* .fondo {
-            background: linear-gradient( rgb(252, 252, 252), #0076c6);
-            width: 100%;
-        } */
-
 .foto-fondo {
     position: absolute;
     width: 100%;
