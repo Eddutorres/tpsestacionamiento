@@ -36,6 +36,7 @@ include_once("encabezado.php");
         function funcion(){
             alert('<?php echo accion(); ?>');
             alert(<?php echo acciondos(); ?>);
+            
             /* Escribir en el Documento*/
             if (condition) {
                 

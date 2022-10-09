@@ -30,7 +30,7 @@ close2.addEventListener('click', () => {
 // boton cambiar area
 
 const change_area= document.getElementById('change_area');
-const area= document.getElementById('area');
+const titulo_area= document.getElementById('area');
 
 change_area.addEventListener('click', () => {
     area.innerHTML=`
