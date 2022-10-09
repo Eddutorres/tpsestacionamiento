@@ -15,10 +15,6 @@
     text-align: center;
 }
 
-.reg-veh {
-    text-decoration: none;
-    color: #e4e4e4;
-}
 
 .sub-menu-reg {
     padding: 15px;
@@ -34,6 +30,26 @@
 
 
 /***********************************/
+.reg-veh {
+    text-decoration: none;
+    /* color: #e4e4e4; */
+}
+/* ---------------------------------------------------------------- */
+.ocupado{
+    display: inline-block ;
+    background-image: url("../img/png/auto-diag-small.png");
+    background-size: cover;
+    background-position: right 20%;
+    cursor: pointer;
+}
+
+.desocupado{
+    display: inline-block ;
+    /* background-color: #1778b8c7; */
+    cursor: pointer;
+}
+/* ---------------------------------------------------------------- */
+
 .titulo-estacionamiento{
     width: 100%;
     text-align: center;
@@ -42,8 +58,7 @@
 .contador {
     width: 100%;
     display: flex;
-    margin-top: 10px ;
-    
+    margin-top: 10px ;      
 }
 
 .cont-antvar{
@@ -56,14 +71,53 @@
     width: 100%; 
 
 }
-
+/* -----------------------------ESTACIONAMIENTOS ANTONIO VARAS----------------------------------------- */
 .row {
     line-height: 0;
+    max-height: 115px;
+    background-size: 550px 125px;
+    background-position: left -5px;
 }
 
+.lugar1 {
+    background-image: url(../img/png/asfalto1.jpg);
+    height: 125px;
+    max-width:550px;
+
+}
+
+.lugar2 {
+    height: 125px;
+    max-width:385px;
+    background-image: url(../img/png/asfalto2.png);
+
+}
+.lugar3 {
+    height: 125px;
+    max-width:550px;
+    background-image: url(../img/png/asfalto3.png);
+}
+
+.lugar4 {
+    height: 63px;
+    max-width:495px;
+    background-image: url(../img/png/asfalto4.png);
+}
+
+.lugar5 {
+    height: 63px;
+    max-width:165px;
+    background-image: url(../img/png/asfalto5.png);
+}
+
+
+
+/* ------------------------------------------------------------------------ */
 .input-reg-veh{
     margin: 15px;
-    text-align: center;
+    /* text-align: center; */
+    width:550px;
+    display: inline-block;
 }
 @media (min-width:1024px){
 
@@ -75,8 +129,11 @@
 
 .btn-est{
     cursor: pointer;
-    border-radius: 5px;
-    color:rgba(17, 118, 185, 0.78)7 ;
-    background-color: #0eb825c7;
-    margin: 1.5px;
+    /* border-radius: 5px; */
+    /* color:rgba(17, 118, 185, 0.78)7 ; */
+    /* background-color: #0eb825c7; */
+    /* margin: 1.5px; */
+    margin: 4px -.8px;
+    height: 50px; 
+    width: 52px
 }

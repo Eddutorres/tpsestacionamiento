@@ -1,8 +1,9 @@
-// modal 1
+ // modal 1
 
 const open = document.getElementById('open');
 const modal_container = document.getElementById('modal_container');
 const close = document.getElementById('close');
+
 
 open.addEventListener('click', () => {
     modal_container.classList.add('show');  
@@ -24,4 +25,20 @@ open2.addEventListener('click', () => {
 
 close2.addEventListener('click', () => {
     modal_container2.classList.remove('show2');
+});
+
+// boton cambiar area
+
+const change_area= document.getElementById('change_area');
+const area= document.getElementById('area');
+
+change_area.addEventListener('click', () => {
+    area.innerHTML=`
+    
+            <?php
+            include_once('antoniovaras.php')
+            ?>            
+    `
+
+    
 });

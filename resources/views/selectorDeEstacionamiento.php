@@ -9,11 +9,11 @@
 <body>
 
     <div class="contenedor-button">
-        <button class="button-1"> Antonio Varas</button>
+        <button class="button-1">Antonio Varas</button>
     </div>
 
     <div class="contenedor-button">
-        <button class="button-2">Pratt</button>
+        <button class="button-2">Prat</button>
     </div>
 
     <!-- FOOTER -->

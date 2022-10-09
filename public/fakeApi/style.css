@@ -1,0 +1,77 @@
+/*_______________ all of our css code goes here ______________*/
+
+
+ *{ padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+    /* outline: 1px dotted purple;  */
+}  
+
+body{
+    padding-left: 0.5%;
+}
+
+.area-planos{
+    width: 100%;
+    height:100%;
+    display: inline;
+    justify-content :center;  
+}
+
+.ocupado{
+    width: 51px;
+    height:54px;
+    display: inline-block ;
+    margin: 10px 0px;
+    background-image:url('png/auto-diag-small.png');
+    background-size: contain;
+    cursor: pointer;
+}
+
+.desocupado{
+    width: 51px;
+    height:54px;
+    display: inline-block ;
+    margin: 10px 0px;
+    background-image:url('');
+    display: inline-block ;
+    cursor: pointer;
+
+}
+
+.w100{
+    width:580px;
+    
+}
+
+/*______fondo de sectores y tamaño segun cantidad de espacios ______________*/
+.sector1{
+    height: 160px;
+    min-width: 555px;
+    max-width: 555px;
+    background-image:url('png/asfalto1.jpg');
+    background-size: 555px 160px;;
+    display: inline-block;
+    border-color:pink;
+
+}
+
+.sector2{
+    height: 160px;
+    min-width: 390px;
+    max-width: 390px;
+    background-image:url('png/asfalto2.png');
+    background-size:  555px 160px;
+    display: inline-block;
+}
+
+.sector3{
+    height: 160px;
+    min-width: 555px;
+    max-width: 555px;
+    background-image:url('png/asfalto3.png');
+    background-size:  555px 160px;
+    display: inline-block;
+}
