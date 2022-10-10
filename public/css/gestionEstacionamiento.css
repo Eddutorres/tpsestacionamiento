@@ -78,6 +78,12 @@
     background-size: 550px 125px;
     background-position: left -5px;
 }
+.rowX {
+    line-height: 0;
+    max-height: 115px;
+    background-size: 605px 125px;
+    background-position: left -5px;
+}
 
 .lugar1 {
     background-image: url(../img/png/asfalto1.jpg);
@@ -110,13 +116,34 @@
     background-image: url(../img/png/asfalto5.png);
 }
 
+.lugarA {
+    background-image: url(../img/png/asfalto6.png);
+    height: 60px;
+    max-width:605px;
+
+}
+
+.lugarB {
+    background-image: url(../img/png/asfalto7.png);
+    height: 125px;
+    max-width:550px;
+
+}
+
+.lugarC {
+    background-image: url(../img/png/asfalto8.png);
+    height: 60px;
+    max-width:494px;
+
+}
+
 
 
 /* ------------------------------------------------------------------------ */
 .input-reg-veh{
     margin: 15px;
     /* text-align: center; */
-    width:550px;
+    width:605px;
     display: inline-block;
 }
 @media (min-width:1024px){

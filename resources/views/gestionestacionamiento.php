@@ -65,7 +65,7 @@ include_once("encabezado.php");
             <div>
                 <section class="grilla-reg-ing" id='area'>
                     <?php
-                    include_once('antoniovaras.php')
+                    include_once('prat.php')
                     ?>            
                 </section>
             </div>
