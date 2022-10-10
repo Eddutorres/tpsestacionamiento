@@ -38,6 +38,7 @@
                                 <label>Rut: </label>
                                 <input type="rut" name='rut' id='rut' required>
                             </div>
+                            
                             <div class="inputs-form-reg-us">
                                 <label>Username: </label>
                                 <input type="username" name='username' id='username' required>
@@ -46,9 +47,10 @@
                                 <label>Password: </label>
                                 <input type="password" name='password' id='password' required>
                             </div>
+                            
                             <div class="inputs-form-reg-us">
                                 <label>Rol: </label>
-                                <select class="combolista" name="optionlist" id='optionlist' onchange="combo(this,'rol')">
+                                <select class="combolista" name="role" id='role' onchange="combo(this,'role')">
                                     <option value="operador">Operador</option>
                                     <option value="administrador">Administrador</option>
                                 </select>
@@ -80,6 +82,7 @@
                     </tr>
                 </table>
             </div>
+            
         </section>
         
     </main>

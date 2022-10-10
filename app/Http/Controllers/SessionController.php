@@ -8,7 +8,7 @@ use App\Models\User;
 class SessionController extends Controller
 {
     public function create(){
-        return view ('tpsLogin');
+        return view ('auth.tpsLogin');
     }
 
     public function store(){
@@ -16,9 +16,26 @@ class SessionController extends Controller
             return back()->withErrors([
                 'message' => 'Usuario o contraseña incorrecta, intentelo de nuevo',
             ]);
+        } else {
+            if(auth()->user()->role == 'admin'){
+                return redirect()->to('gestionUsuario');
+            }else{
+                return redirect()->to('reportes');
+            }
+
+
         }
-        return redirect()->to('gestionUsuario');
+        
 
     }
+
+    public function destroy(){
+
+        auth()->logout();
+
+        return redirect()->to('/');
+    }
+
+    
 }
 
