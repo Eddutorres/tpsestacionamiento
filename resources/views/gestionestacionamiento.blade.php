@@ -1,27 +1,33 @@
-<?php
-include_once("encabezado.php");
-?>
+
+@include("encabezado");
+
 <body>
     <!--==============CABECERA======================-->
-    <?php
-    include_once("headerMenu.php");
-    ?>
-    <!--================CUERPO======================-->
+  
+   @include("headerMenu");
+   
+
     <main class="contenido-cuerpo">
-        <section class="menu-nav-est">
-            <div class="naveg-reg-veh">
+       @section('content')
+            
             <!--  -->
             <!-- Modal 1 -->
             <!--  -->
+     
                 <div class="button-modal">
-                    <button class="button-modal-reg-veh" id="open">Registrar salida</button>
+                    <button class="button-modal-reg-veh" method="POST" id="open">Registrar salida</button>
+
+                    <form action="/gestionestacionamiento"  role="form">
+
+                         {{csrf_field()}}
                     <div id="modal_container" class="modal_container_salida">
+
                         <div class="modal">
                             <h1 class="h1-modal">Registro salida</h1>
                             
                             <div class="reg-busqueda">
                                 <label>Buscar patente</label>
-                                <input class="input_reg_salida"  type="text" placeholder="XS6452">
+                                <input name="patente"  type="text" placeholder="XS6452">
                                 <button class="button-modal-reg-veh">Buscar</button>
                             </div>
 
@@ -29,22 +35,22 @@ include_once("encabezado.php");
 
                             <div class="reg-busqueda">
                                 <label>Hora Entrada: </label>
-                                <input class="input_reg_salida" type="text">
+                                <input name="hora_entrada"  type="time">
                             </div>
 
                             <div class="reg-busqueda">
                                 <label>Nombre: </label>
-                                <input class="input_reg_salida" type="text">
+                                <input name="nombre" type="text">
                             </div>
 
                             <div class="reg-busqueda">
                                 <label>Rut: </label>
-                                <input class="input_reg_salida" type="text">
+                                <input name="rut" type="text">
                             </div>
 
                             <div class="reg-busqueda">
                                 <label for="">Hora salida: </label>
-                                <input class="input_reg_salida" type="time">
+                                <input name="hora_salida" type="time">
                             </div>
 
                             <div class="reg-busqueda-button">
@@ -54,6 +60,8 @@ include_once("encabezado.php");
                         </div>
                     </div>
                 </div>
+
+   
                 <!--  -->
                 <!-- modal 2 -->
                 <!--  -->
@@ -72,9 +80,8 @@ include_once("encabezado.php");
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- CONTENIDO DE PAGINA -->
+                </form>
+                <!-- CONTENIDO DE PAGINA -->
         <hr>
 
         <div class="titulo-pag">
@@ -97,9 +104,9 @@ include_once("encabezado.php");
             <section class="grilla-reg-ing">
                 <div class="estacionamientos">
                     <div class="input-reg-veh">
-                        <?php
-                            include_once('antoniovaras.php')
-                        ?>
+                        
+                            @include('antoniovaras')
+                        
                     </div>
                 </div>
             </section>
@@ -110,9 +117,9 @@ include_once("encabezado.php");
         <script src="../js/funcionBotones.js"></script>
     </main>
     <!--FOOTER-->
-    <?php
-    include_once('footer.php')
-    ?>
+    
+    @include('footer')
+
 </body>
 
 </html>
