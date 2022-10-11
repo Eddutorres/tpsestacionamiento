@@ -10,14 +10,11 @@ class registro extends Model
     use HasFactory;
     protected $fillable = [
         'nombre',
-        'apellidop',
-        'apellidom',
+        'hora_ingreso',
+        'hora_salida',
+        'nombre',
+        'patente',
         'rut',
-        'role',
-        'password',
-        'username',
-       /* 'email',
-        'password',*/
       
     ];
 }
