@@ -7,7 +7,12 @@
     @if(auth()->check())
         <nav class="naveg">
             <a class="navegador" href="gestionestacionamiento">Gestion de Estacionamientos</a>
-            <a class="navegador" href="gestionUsuario">Administrador de usuario</a>
+            @if(Auth::check() && Auth::user()->role == "admin")
+                <a class="navegador" href="gestionUsuario">Administrador de usuario</a>
+            @endcan
+                
+            
+            
             <a class="navegador" href="reportes">Reportes</a>
             <button class="cerrar_sesion" id="cerrar_sesion" onclick="location.href='{{route('tpsLogin.destroy')}}'">Cerrar sesión</button>
         </nav>

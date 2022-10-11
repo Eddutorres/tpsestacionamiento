@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
     <!--==============CABECERA======================-->
     
     @include("encabezado");
@@ -69,6 +61,26 @@
         <section class="user-grilla">
             <div class="contenido2">
                 <table class="table-grilla">
+                @foreach ($users as $user)
+                <div class="row py-1"><tr>
+                    <div class="col-md-9 d-flex align-items-center">
+                       <td><a href="{{ route('gestionUsuario-edit',['id' => $user->id])}}">{{ $user->name }}</a></td>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-end">
+                        <td><form action="{{ route('gestionUsuario-destroy', [$user->id]) }}" method="POST"></td>
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                        </form>
+                    </div>
+                    </tr>
+                </div>
+                    
+                @endforeach
+                </table>
+            </div>
+            <!--<div class="contenido2">
+                <table class="table-grilla">
                     <tr>
                         <td class="title-table">Nombre</td>
                         <td class="title-table">Apellido Paterno</td>
@@ -81,7 +93,7 @@
                         <td><input type="button" class="borrar" value="Eliminar"></td>
                     </tr>
                 </table>
-            </div>
+            </div>-->
             
         </section>
         
@@ -93,6 +105,5 @@
 
 
     
-</body>
-</html>
+
 
