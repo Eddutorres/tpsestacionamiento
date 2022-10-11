@@ -21,8 +21,8 @@ Route::get('/reportes', function(){
     return view('reportes');
 })->middleware('auth');
 
-Route::get('/papag', function(){
-    return view('papag');
+Route::get('/index', function(){
+    return view('index');
 })->middleware('auth');
 
 Route::get('/', [SessionController::class, 'create'])->middleware('guest')->name('tpsLogin.index');

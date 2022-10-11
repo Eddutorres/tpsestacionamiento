@@ -20,7 +20,7 @@ class SessionController extends Controller
             if(auth()->user()->role == 'admin'){
                 return redirect()->to('gestionUsuario');
             }else{
-                return redirect()->to('reportes');
+                return redirect()->to('index');
             }
 
 
