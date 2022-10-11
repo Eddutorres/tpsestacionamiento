@@ -8,8 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class registro extends Model
 {
     use HasFactory;
-    protected $connection = 'tps';
-    protected $primaryKey = 'id';
-    public $table = 'registros';
-    public $timesTamps = 'true';
+    protected $fillable = [
+        'nombre',
+        'apellidop',
+        'apellidom',
+        'rut',
+        'role',
+        'password',
+        'username',
+       /* 'email',
+        'password',*/
+      
+    ];
 }

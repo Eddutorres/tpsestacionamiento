@@ -15,9 +15,9 @@
             <!--  -->
      
                 <div class="button-modal">
-                    <button class="button-modal-reg-veh" method="POST" id="open">Registrar salida</button>
+                    <button class="button-modal-reg-veh"  id="open">Registrar salida</button>
 
-                    <form action="/gestionestacionamiento"  role="form">
+                    <form action="/gestionestacionamiento" method="POST"  role="form">
 
                          {{csrf_field()}}
                     <div id="modal_container" class="modal_container_salida">
@@ -54,7 +54,7 @@
                             </div>
 
                             <div class="reg-busqueda-button">
-                                <button class="button-modal-reg-veh" id="close">Registrar</button>
+                                <button type="submit" class="button-modal-reg-veh" id="close">Registrar</button>
                             </div>
                             
                         </div>

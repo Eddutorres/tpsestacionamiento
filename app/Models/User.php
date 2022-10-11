@@ -22,7 +22,7 @@ class User extends Authenticatable
         'apellidop',
         'apellidom',
         'rut',
-        'optionlist',
+        'role',
         'password',
         'username',
        /* 'email',
