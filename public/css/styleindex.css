@@ -47,6 +47,7 @@ body{
     font-size: 20px;
 }
 
+/*estilo de pagina pantalla pc*/
 @media(min-width:1024px){
     .contenedor{
         align-items: center;
