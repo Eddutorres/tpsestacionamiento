@@ -8,9 +8,9 @@ use App\Http\Controllers\SessionController;
     return view('tpsLogin');
 });*/
 
-/*Route::get('/gestionUsuario', function () {
-    return view('gestionUsuario');
-});*/
+Route::get('/index', function () {
+    return view('index');
+});
 Route::get('/estacionamientos', function(){
     return view('selectorDeEstacionamiento');
 });
