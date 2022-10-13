@@ -45,7 +45,7 @@
 
 .desocupado{
     display: inline-block ;
-    /* background-color: #1778b8c7; */
+    background-color: #1778b8c7;
     cursor: pointer;
 }
 /* ---------------------------------------------------------------- */
@@ -74,76 +74,37 @@
 /* -----------------------------ESTACIONAMIENTOS ANTONIO VARAS----------------------------------------- */
 .row {
     line-height: 0;
-    max-height: 115px;
-    background-size: 550px 125px;
+    max-height: 408px;
+    background-size: 550px 820px;
     background-position: left -5px;
 }
-.rowX {
+
+.rowX {   /*row de prat    */
     line-height: 0;
-    max-height: 115px;
-    background-size: 605px 125px;
+    max-height: 820px;
+    background-size: 550px 820px;
     background-position: left -5px;
 }
 
 .lugar1 {
-    background-image: url(../img/png/asfalto1.jpg);
-    height: 125px;
+    background-image: url(../img/png/asfaltoPlus11.png);
+    height: 820px;
     max-width:550px;
 
-}
-
-.lugar2 {
-    height: 125px;
-    max-width:385px;
-    background-image: url(../img/png/asfalto2.png);
-
-}
-.lugar3 {
-    height: 125px;
-    max-width:550px;
-    background-image: url(../img/png/asfalto3.png);
-}
-
-.lugar4 {
-    height: 63px;
-    max-width:495px;
-    background-image: url(../img/png/asfalto4.png);
-}
-
-.lugar5 {
-    height: 63px;
-    max-width:165px;
-    background-image: url(../img/png/asfalto5.png);
 }
 
 .lugarA {
-    background-image: url(../img/png/asfalto6.png);
-    height: 60px;
-    max-width:605px;
-
-}
-
-.lugarB {
-    background-image: url(../img/png/asfalto7.png);
-    height: 125px;
+    background-image: url(../img/png/asfaltoPlus6.png);
+    height: 820px;
     max-width:550px;
 
 }
-
-.lugarC {
-    background-image: url(../img/png/asfalto8.png);
-    height: 60px;
-    max-width:494px;
-
-}
-
-
 
 /* ------------------------------------------------------------------------ */
 .input-reg-veh{
     margin: 15px;
     /* text-align: center; */
-    width:605px;
+    width:550px;
     display: inline-block;
 }
 @media (min-width:1024px){

@@ -14,12 +14,20 @@ use App\Http\Controllers\SessionController;
 Route::get('/estacionamientos', function(){
     return view('selectorDeEstacionamiento');
 });
-Route::get('/gestionestacionamiento', function(){
-    return view('gestionestacionamiento');
+Route::get('/gestionestacionamientovaras', function(){
+    return view('gestionestacionamientovaras');
+});
+
+Route::get('/gestionestacionamientoprat', function(){
+    return view('gestionestacionamientoprat');
 });
 
 Route::get('/reportes', function(){
     return view('reportes');
+});
+
+Route::get('/chanchitoFeliz', function(){
+    return view('chanchitoFeliz');
 });
 
 

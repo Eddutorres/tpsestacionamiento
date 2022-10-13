@@ -1,49 +1,16 @@
-<?php
-include_once("encabezado.php");
-?>
+@include("encabezado")
 <body>
     <!--==============CABECERA======================-->
-    <?php
-    include_once("headerMenu.php");
-    ?>
+    @include("headerMenu")
+    
     <!--================CUERPO======================-->
     <main class="contenido-cuerpo">
         <section class="menu-nav-est">
             <div class="naveg-reg-veh">
-            <!-- Boton cambio de Area Estacionamientos -->
-            <!--  -->
-                <div class="button-modal">
-                    <input class="button-modal-reg-veh" type="checkbox" name="" value="Cambiar Area" id="boton1" onclick = "funcion();">
-                </div>
             <!--================MODALS======================-->  
-            <?php
-            include_once("modals.php");
-            ?>
-        </section>
+            @include("modals")
+            </section>
         <!------------------- CONTENIDO DE PAGINA ----------------------------------------------------->
-        <hr>
-        
-        <?php
-        function accion(){
-            echo "accion";
-        }
-        function acciondos(){
-            echo 19;
-        }
-        ?>
-
-        <script>
-        function funcion(){
-            alert('<?php echo accion(); ?>');
-            alert(<?php echo acciondos(); ?>);
-            
-            /* Escribir en el Documento*/
-            if (condition) {
-                
-            }
-            // document.write('<?php echo accion(); ?>');
-            // document.write(<?php echo acciondos(); ?>);
-        }
         </script>   
         <!---------------------------------------------------------PENDIENTE DE RESOLVER------------------------------------>
 
@@ -64,9 +31,7 @@ include_once("encabezado.php");
             </div>
             <div>
                 <section class="grilla-reg-ing" id='area'>
-                    <?php
-                    include_once('prat.php')
-                    ?>            
+                    @include('prat') 
                 </section>
             </div>
         </div>
@@ -75,9 +40,7 @@ include_once("encabezado.php");
         <script src="../js/funcionBotones.js"></script>
     </main>
     <!--FOOTER-->
-    <?php
-    include_once('footer.php')
-    ?>
+    @include_once('footer')
 </body>
 
 </html>
