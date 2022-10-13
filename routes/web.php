@@ -27,9 +27,6 @@ Route::get('/reportes', function(){
     return view('reportes');
 });
 
-Route::get('/chanchitoFeliz', function(){
-    return view('chanchitoFeliz');
-});
 
 
 Route::get('/', [SessionController::class, 'create'])->name('tpsLogin.index');
