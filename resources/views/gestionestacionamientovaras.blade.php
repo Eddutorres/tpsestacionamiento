@@ -20,10 +20,10 @@
             </div>
             <div class="cont-antvar">
                 <div class="contador">
-                    <h3 class="contador-estado">Total: </h3>
+                    <h3 class="contador-estado">Totalvaras:  </h3>
                 </div>
                 <div class="contador">
-                    <h3 class="contador-estado">Disponibles: </h3>
+                    <h3 class="contador-estado">Disponiblesvaras: </h3>
                 </div>
                 <div class="contador">
                     <h3 class="contador-estado" id="diferencia1">Usados: </h3>
