@@ -21,7 +21,10 @@
                 <a class="btn-est desocupado" id='16' onClick="click_here(this.id)" type="button" value="16" ></a>
                 <a class="btn-est desocupado" id='17' onClick="click_here(this.id)" type="button" value="17" ></a>
                 <a class="btn-est desocupado" id='18' onClick="click_here(this.id)" type="button" value="18" ></a>
-                <a class="btn-est desocupado" id='19' onClick="click_here(this.id)" type="button" value="19" ></a><!-- *1 -->
+                <a class="btn-est desocupado" id='19' onClick="click_here(this.id)" type="button" value="19" ></a>
+            </div>
+            <br>                         
+            <div class="row lugar2">
                 <a class="btn-est desocupado" id='20' onClick="click_here(this.id)" type="button" value="20" ></a>
                 <a class="btn-est desocupado" id='21' onClick="click_here(this.id)" type="button" value="21" ></a>
                 <a class="btn-est desocupado" id='22' onClick="click_here(this.id)" type="button" value="22" ></a>
@@ -35,7 +38,10 @@
                 <a class="btn-est desocupado" id='30' onClick="click_here(this.id)" type="button" value="30" ></a>
                 <a class="btn-est desocupado" id='31' onClick="click_here(this.id)" type="button" value="31" ></a>
                 <a class="btn-est desocupado" id='32' onClick="click_here(this.id)" type="button" value="32" ></a>
-                <a class="btn-est desocupado" id='33' onClick="click_here(this.id)" type="button" value="33" ></a><!-- *2 -->               
+                <a class="btn-est desocupado" id='33' onClick="click_here(this.id)" type="button" value="33" ></a>
+            </div>
+            <br>                              
+            <div class="row lugar3">                
                 <a class="btn-est desocupado" id='34' onClick="click_here(this.id)" type="button" value="34" ></a>
                 <a class="btn-est desocupado" id='35' onClick="click_here(this.id)" type="button" value="35" ></a>
                 <a class="btn-est desocupado" id='36' onClick="click_here(this.id)" type="button" value="36" ></a>
@@ -55,7 +61,10 @@
                 <a class="btn-est desocupado" id='50' onClick="click_here(this.id)" type="button" value="50" ></a>
                 <a class="btn-est desocupado" id='51' onClick="click_here(this.id)" type="button" value="51" ></a>
                 <a class="btn-est desocupado" id='52' onClick="click_here(this.id)" type="button" value="52" ></a>
-                <a class="btn-est desocupado" id='53' onClick="click_here(this.id)" type="button" value="53" ></a><!-- *3 -->
+                <a class="btn-est desocupado" id='53' onClick="click_here(this.id)" type="button" value="53" ></a>
+            </div>
+            <br>           
+            <div class="row lugar4">
                 <a class="btn-est desocupado" id='54' onClick="click_here(this.id)" type="button" value="54" ></a>
                 <a class="btn-est desocupado" id='55' onClick="click_here(this.id)" type="button" value="55" ></a>
                 <a class="btn-est desocupado" id='56' onClick="click_here(this.id)" type="button" value="56" ></a>
@@ -64,10 +73,13 @@
                 <a class="btn-est desocupado" id='59' onClick="click_here(this.id)" type="button" value="59" ></a>
                 <a class="btn-est desocupado" id='60' onClick="click_here(this.id)" type="button" value="60" ></a>
                 <a class="btn-est desocupado" id='61' onClick="click_here(this.id)" type="button" value="61" ></a>
-                <a class="btn-est desocupado" id='62' onClick="click_here(this.id)" type="button" value="62" ></a><!-- *4 -->                             
+                <a class="btn-est desocupado" id='62' onClick="click_here(this.id)" type="button" value="62" ></a>
+            </div>
+            <br>            
+            <div class="row lugar5">                              
                 <a class="btn-est desocupado" id='63' onClick="click_here(this.id)" type="button" value="63" ></a>
                 <a class="btn-est desocupado" id='64' onClick="click_here(this.id)" type="button" value="64" ></a>
-                <a class="btn-est desocupado" id='65' onClick="click_here(this.id)" type="button" value="65" ></a><!-- *5 -->
+                <a class="btn-est desocupado" id='65' onClick="click_here(this.id)" type="button" value="65" ></a>
             </div>
         </section>
     </div>             

@@ -48,7 +48,7 @@
                             </div>
                             <div class="inputs-form-reg-us">
                                 <label>Rol: </label>
-                                <select class="combolista" name="optionlist" id='optionlist' onchange="combo(this,'rol')">
+                                <select class="combolista" name="role" id='role' onchange="combo(this,'role')">
                                     <option value="operador">Operador</option>
                                     <option value="administrador">Administrador</option>
                                 </select>

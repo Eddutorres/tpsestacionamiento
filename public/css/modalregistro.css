@@ -9,7 +9,7 @@
       padding: 10px 25px;
     }
     
-    .modal_container_salida, .modal_container_modifica, .modal_container_entrada {
+    .modal_container_salida  {
       display: flex;
       background-color: rgba(0, 0, 0, 0.3);
       align-items: center;
@@ -23,14 +23,41 @@
       width: 100vw;
       transition: opacity 0.3s ease;
     }
-
-    .show, .show2, .show3 {
+    
+  .modal_container_modifica{
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.3);
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      pointer-events: none;
+      opacity: 0;  
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      transition: opacity 0.3s ease;
+  }
+    .show {
       pointer-events: auto;
       opacity: 1;
     }
     
-      
-    .modal, .modal2, .modal3 {
+    .show2 {
+      pointer-events: auto;
+      opacity: 1;
+    }
+    
+    .modal {
+      background-color: #fff;
+      width: 600px;
+      max-width: 100%;
+      padding: 30px 50px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    .modal2{
       background-color: #fff;
       width: 600px;
       max-width: 100%;
@@ -56,7 +83,7 @@
     padding: 10px 25px;
   }
   
-  .modal_container_salida, .modal_container_modifica, .modal_container_entrada {
+  .modal_container_salida  {
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
     align-items: center;
@@ -71,12 +98,31 @@
     transition: opacity 0.3s ease;
   }
   
-  .show, .show2, .show3 {
+  .modal_container_modifica{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;  
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+  }
+  .show {
     pointer-events: auto;
     opacity: 1;
-  }  
+  }
   
-  .modal, .modal2, .modal3 {
+  .show2 {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .modal {
     background-color: #fff;
     width: 600px;
     max-width: 100%;
@@ -84,7 +130,16 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
-  }   
+  }
+  .modal2{
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
   
   .modal h1 {
     margin: 0;

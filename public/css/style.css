@@ -2,6 +2,7 @@
 @import url(fontello.css);
 @import url(gestionEstacionamiento.css);
 @import url(modalregistro.css);
+
 /* Formateo de pagina*/
 
 * {
@@ -243,4 +244,3 @@ header label {
         height: 90%;
     }
 }
-

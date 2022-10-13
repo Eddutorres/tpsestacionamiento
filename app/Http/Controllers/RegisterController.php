@@ -12,7 +12,7 @@ class RegisterController extends Controller
 
     public function store(){
         
-        $user = User::create(request(['name','apellidop','apellidom','rut','optionlist','password','username']));
+        $user = User::create(request(['name','apellidop','apellidom','rut','role','password','username']));
 
         auth()->login($user);
         return redirect()->to('/');

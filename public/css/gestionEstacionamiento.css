@@ -15,6 +15,10 @@
     text-align: center;
 }
 
+.reg-veh {
+    text-decoration: none;
+    color: #e4e4e4;
+}
 
 .sub-menu-reg {
     padding: 15px;
@@ -45,7 +49,7 @@
 
 .desocupado{
     display: inline-block ;
-    background-color: #1778b8c7;
+    /* background-color: #1778b8c7; */
     cursor: pointer;
 }
 /* ---------------------------------------------------------------- */
@@ -58,7 +62,8 @@
 .contador {
     width: 100%;
     display: flex;
-    margin-top: 10px ;      
+    margin-top: 10px ;
+    
 }
 
 .cont-antvar{
@@ -71,40 +76,15 @@
     width: 100%; 
 
 }
-/* -----------------------------ESTACIONAMIENTOS ANTONIO VARAS----------------------------------------- */
+
 .row {
     line-height: 0;
-    max-height: 408px;
-    background-size: 550px 820px;
-    background-position: left -5px;
 }
 
-.rowX {   /*row de prat    */
-    line-height: 0;
-    max-height: 820px;
-    background-size: 550px 820px;
-    background-position: left -5px;
-}
-
-.lugar1 {
-    background-image: url(../img/png/asfaltoPlus11.png);
-    height: 820px;
-    max-width:550px;
-
-}
-
-.lugarA {
-    background-image: url(../img/png/asfaltoPlus6.png);
-    height: 820px;
-    max-width:550px;
-
-}
-
-/* ------------------------------------------------------------------------ */
 .input-reg-veh{
     margin: 15px;
     /* text-align: center; */
-    width:550px;
+    width:605px;
     display: inline-block;
 }
 @media (min-width:1024px){
@@ -117,11 +97,8 @@
 
 .btn-est{
     cursor: pointer;
-    /* border-radius: 5px; */
-    /* color:rgba(17, 118, 185, 0.78)7 ; */
-    /* background-color: #0eb825c7; */
-    /* margin: 1.5px; */
-    margin: 4px -.8px;
-    height: 50px; 
-    width: 52px
+    border-radius: 5px;
+    color:rgba(17, 118, 185, 0.78)7 ;
+    background-color: #0eb825c7;
+    margin: 1.5px;
 }
