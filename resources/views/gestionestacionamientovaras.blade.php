@@ -40,7 +40,7 @@
         <script src="../js/funcionBotones.js"></script>
     </main>
     <!--FOOTER-->
-    @include_once('footer')
+    @include('footer')
 </body>
 
 </html>

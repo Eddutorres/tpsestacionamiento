@@ -32,7 +32,7 @@
                 </section>
             </div>
         </div>
-        <script src="../js/estacionamiento.js"></script>
+        {{--  <script src="../js/estacionamiento.js"></script>  --}}
         <script src="../js/funcionestacionamiento.js"></script>
         <script src="../js/funcionBotones.js"></script>
     </main>
