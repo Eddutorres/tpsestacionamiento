@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     padding: 0;
@@ -10,15 +11,36 @@ body {
 }
 
 .img-t img {
+=======
+body{
+    margin: 0;
+    padding: 0;
+    border: border-box; 
+}
+
+.img-t{
+    position: absolute;
+    z-index: -1;
+    /* width: 100%; */
+}
+.img-t img{
+>>>>>>> origin/manuel
     width: 100%;
     height: 99.1vh;
 }
 
+<<<<<<< HEAD
 .contenedor-button {
     width: fit-content;
 }
 
 .contenedor {
+=======
+.contenedor-button{
+    width: fit-content;
+}
+.contenedor{
+>>>>>>> origin/manuel
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,12 +48,17 @@ body {
     width: 100%;
 }
 
+<<<<<<< HEAD
 .box-button {
+=======
+.box-button{
+>>>>>>> origin/manuel
     height: auto;
     width: fit-content;
     justify-content: center;
     align-items: center;
 }
+<<<<<<< HEAD
 
 .doblefondo {
     display: none;
@@ -42,6 +69,16 @@ body {
     cursor: pointer;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     margin: 50px 50px 50px 50px;
+=======
+.doblefondo{
+    display: none;
+}
+.button{
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    margin: 50px 50px 50px 50px ;
+>>>>>>> origin/manuel
     border-radius: 5px;
     color: #fff;
     background-color: #03304e;
@@ -50,6 +87,7 @@ body {
     font-size: 20px;
 }
 
+<<<<<<< HEAD
 
 /*estilo de pagina pantalla pc*/
 
@@ -72,14 +110,51 @@ body {
         max-width: fit-content;
     }
     .doblefondo {
+=======
+/*estilo de pagina pantalla pc*/
+@media(min-width:1024px){
+    .contenedor{
+        align-items: center;
+        height: 99vh;
+    }
+    .box-button{
+        
+        display: flex;
+    }
+
+    .fondo-est{
+    text-align: center;
+    }
+
+    .img-t{
+        width: 100%;
+        
+    }
+
+    .fondo-est img{
+        height: 99.1vh; 
+        max-width: fit-content;     
+    }
+
+    .doblefondo{
+>>>>>>> origin/manuel
         position: absolute;
         z-index: -2;
         width: 100%;
         display: block;
         filter: blur(6px);
     }
+<<<<<<< HEAD
     .doblefondo img {
         width: 100%;
         max-height: 99.1vh;
     }
 }
+=======
+    .doblefondo img{
+        width: 100%;
+        max-height: 99.1vh;
+    }
+
+} 
+>>>>>>> origin/manuel

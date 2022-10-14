@@ -7,14 +7,16 @@ use App\Models\User;
 class RegisterController extends Controller
 {
     public function create(){
-        return view ('gestionUsuario');
+        return view ('admin.gestionUsuario');
     }
 
     public function store(){
         
-        $user = User::create(request(['name','apellidop','apellidom','rut','role','password','username']));
+        $user = User::create(request(['name','apellidop','apellidom','rut','optionlist','password','username']));
 
-        auth()->login($user);
-        return redirect()->to('/');
+    public function destroy($id){
+        $users = User::find($id);
+        $users->delete();
+        return redirect()->to('gestionUsuario')->with('success','Tarea Eliminada');
     }
 }

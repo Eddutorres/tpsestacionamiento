@@ -1,4 +1,5 @@
-    @include("encabezado");
+
+@include("encabezado");
 
 <body>
     <header class="header">
@@ -13,10 +14,11 @@
                 <div class="form">
                     <form class="login-form" method="POST" action="">
                         @csrf
+                        
                         <input type="text" id="username" name="username" placeholder="Usuario" required>
                         <input type="password" id="password" name="password" placeholder="Contraseña" required>
                         @error('message')
-                            <p class="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">Usuario o contraseña incorrecta</p>
+                            <p class="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">{{$message}}</p>
                         @enderror
                         <button type="submit">Ingresar</button>
                     </form>
@@ -29,4 +31,3 @@
         @include("footer");
 </body>
 
-</html>
