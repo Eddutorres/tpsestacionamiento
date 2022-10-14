@@ -17,7 +17,7 @@
                 <div class="button-modal">
                     <button class="button-modal-reg-veh"  id="open">Registrar salida</button>
 
-                    <form action="/gestionestacionamiento" method="POST"  role="form">
+                    <form action="/gestionestacionamientovaras" method="POST"  role="form">
 
                          {{csrf_field()}}
                     <div id="modal_container" class="modal_container_salida">

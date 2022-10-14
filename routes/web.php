@@ -15,13 +15,13 @@ Route::get('/index', function () {
 Route::get('/estacionamientos', function(){
     return view('selectorDeEstacionamiento');
 });
-Route::get('/gestionestacionamientovaras', function(){
+/*Route::get('/gestionestacionamientovaras', function(){
     return view('gestionestacionamientovaras');
 });
 
 Route::get('/gestionestacionamientoprat', function(){
     return view('gestionestacionamientoprat');
-});
+});*/
 
 Route::get('/reportes', function(){
     return view('reportes');
@@ -35,5 +35,5 @@ Route::post('/', [SessionController::class, 'store'])->name('tpsLogin.store');
 Route::get('/gestionUsuario', [RegisterController::class, 'create'])->name('gestionUsuario.index');
 Route::post('/gestionUsuario', [RegisterController::class, 'store'])->name('gestionUsuario.store');
 
-Route::get('/gestionestacionamiento', [registroController::class, 'create'])->name('gestionestacionamiento.index');
-Route::post('/gestionestacionamiento',[registroController::class, 'store'])->name('gestionestacionamiento.store');
+Route::get('/gestionestacionamientovaras', [registroController::class, 'create'])->name('gestionestacionamientovaras.index');
+Route::post('/gestionestacionamientovaras',[registroController::class, 'store'])->name('gestionestacionamientovaras.store');

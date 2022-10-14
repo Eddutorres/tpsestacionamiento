@@ -1,14 +1,25 @@
 <!-- Modal 1 -->
             <!--  -->
-            <div class="button-modal">
-                    <button class="button-modal-reg-veh" id="open">Registrar salida</button>
+            @section('content')
+            
+            <!--  -->
+            <!-- Modal 1 -->
+            <!--  -->
+     
+                <div class="button-modal">
+                    <button class="button-modal-reg-veh"  id="open">Registrar salida</button>
+
+                    <form action="/gestionestacionamientovaras" method="POST"  role="form">
+
+                         {{csrf_field()}}
                     <div id="modal_container" class="modal_container_salida">
+
                         <div class="modal">
                             <h1 class="h1-modal">Registro salida</h1>
                             
                             <div class="reg-busqueda">
                                 <label>Buscar patente</label>
-                                <input class="input_reg_salida"  type="text" placeholder="XS6452">
+                                <input name="patente"  type="text" placeholder="XS6452">
                                 <button class="button-modal-reg-veh">Buscar</button>
                             </div>
 
@@ -16,31 +27,32 @@
 
                             <div class="reg-busqueda">
                                 <label>Hora Entrada: </label>
-                                <input class="input_reg_salida" type="text">
+                                <input name="hora_entrada"  type="time">
                             </div>
 
                             <div class="reg-busqueda">
                                 <label>Nombre: </label>
-                                <input class="input_reg_salida" type="text">
+                                <input name="nombre" type="text">
                             </div>
 
                             <div class="reg-busqueda">
                                 <label>Rut: </label>
-                                <input class="input_reg_salida" type="text">
+                                <input name="rut" type="text">
                             </div>
 
                             <div class="reg-busqueda">
                                 <label for="">Hora salida: </label>
-                                <input class="input_reg_salida" type="time">
+                                <input name="hora_salida" type="time">
                             </div>
 
                             <div class="reg-busqueda-button">
-                                <button class="button-modal-reg-veh" id="close">Registrar</button>
+                                <button type="submit" class="button-modal-reg-veh" id="close">Registrar</button>
                             </div>
                             
                         </div>
                     </div>
                 </div>
+
                 <!--  -->
                 <!-- modal 2 -->
                 <!--  -->
@@ -71,7 +83,7 @@
 
                             <div class="reg-busqueda">
                                 <label>Hora Entrada: </label>
-                                <input class="input_reg_entrada" type="text">
+                                <input class="input_reg_entrada" type="time">
                             </div>
 
                             <div class="reg-busqueda">
@@ -84,13 +96,10 @@
                                 <input class="input_reg_entrada" type="text">
                             </div>
 
-                            <div class="reg-busqueda">
-                                <label for="">Hora salida: </label>
-                                <input class="input_reg_entrada" type="time">
-                            </div>
+                          
 
                             <div class="reg-busqueda-button">
-                                <button class="button-modal-reg-veh" id="close3">Registrar</button>
+                                <button type="submit" class="button-modal-reg-veh" id="close3">Registrar</button>
                             </div>
                             
                         </div>

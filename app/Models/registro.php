@@ -15,6 +15,5 @@ class registro extends Model
         'nombre',
         'patente',
         'rut',
-      
     ];
 }

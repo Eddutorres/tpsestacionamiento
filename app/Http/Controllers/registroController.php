@@ -8,7 +8,7 @@ use App\Models\registro;
 class registroController extends Controller
 {
     public function create(){
-        return view ('gestionestacionamiento');
+        return view ('gestionestacionamientovaras');
     }
 
     public function store(Request $request){
@@ -20,6 +20,6 @@ class registroController extends Controller
         $registroEstacionamiento->hora_salida=$request['hora_salida'];
         $registroEstacionamiento->save();
         echo($registroEstacionamiento);
-        return redirect()->to('/gestionestacionamiento');
+        return redirect()->to('/gestionestacionamientovaras');
     }
 }
