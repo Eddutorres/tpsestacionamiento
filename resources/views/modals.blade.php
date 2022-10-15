@@ -22,14 +22,16 @@
                                 <input name="patente"  type="text" placeholder="XS6452">
                                 <button class="button-modal-reg-veh">Buscar</button>
                             </div>
-
                             <hr>
-
+                            @foreach ($registro as $item)
+                                {{$registro}}
+                            @endforeach
+                            
                             <div class="reg-busqueda">
                                 <label>Hora Entrada: </label>
                                 <input name="hora_entrada"  type="time">
                             </div>
-
+                           
                             <div class="reg-busqueda">
                                 <label>Nombre: </label>
                                 <input name="nombre" type="text">

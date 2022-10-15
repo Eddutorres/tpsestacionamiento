@@ -20,7 +20,6 @@ class registroController extends Controller
         $registroEstacionamiento->rut=$request['rut'];
         $registroEstacionamiento->hora_salida=$request['hora_salida'];
         $registroEstacionamiento->save();
-        echo($registroEstacionamiento);
         return redirect()->to('/gestionestacionamientovaras')->with('success','Vehiculo guardado');
     }
 
@@ -28,11 +27,9 @@ class registroController extends Controller
        
         $patente = trim($request->get('patente'));
 
-        /*$registro=DB::table('registros')->select('hora_ingreso','nombre','rut')
-                                        ->where('patente','LIKE','%'.$patente.'%')
-                                        ->get();*/ 
+   
         $registro = registro::all();
-        //return view('gestionestacionamientovaras.index',compact('gestionestacionamientovaras'));
+        return view('/gestionestacionamientovaras');
     }
 
 }
