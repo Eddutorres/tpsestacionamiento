@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\registroController;
 
 Route::get('/', function () {
     return view('auth.tpsLogin');
@@ -32,3 +33,8 @@ Route::post('/', [SessionController::class, 'store'])->name('tpsLogin.store');
 Route::get('/gestionUsuario', [RegisterController::class, 'create'])
 ->middleware('auth.admin')->name('gestionUsuario.index');
 Route::post('/gestionUsuario', [RegisterController::class, 'store'])->name('gestionUsuario.store');
+
+Route::get('/gestionestacionamientovaras', [registroController::class, 'create'])->name('gestionestacionamientovaras.index');
+
+Route::post('/gestionestacionamientovaras',[registroController::class, 'store'])->name('gestionestacionamientovaras.store');
+

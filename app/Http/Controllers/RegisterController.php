@@ -13,6 +13,7 @@ class RegisterController extends Controller
     public function store(){
         
         $user = User::create(request(['name','apellidop','apellidom','rut','optionlist','password','username']));
+    }
 
     public function destroy($id){
         $users = User::find($id);

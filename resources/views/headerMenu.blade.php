@@ -6,7 +6,7 @@
         <label class="icon-menu" for="menu-bar"></label>
     @if(auth()->check())
         <nav class="naveg">
-            <a class="navegador" href="gestionestacionamiento">Gestion de Estacionamientos</a>
+            <a class="navegador" href="gestionestacionamientovaras">Gestion de Estacionamientos</a>
             @if(Auth::check() && Auth::user()->role == "admin")
                 <a class="navegador" href="gestionUsuario">Administrador de usuario</a>
             @endcan
@@ -14,7 +14,7 @@
             
             
             <a class="navegador" href="reportes">Reportes</a>
-            <button class="cerrar_sesion" id="cerrar_sesion" onclick="location.href='{{route('tpsLogin.destroy')}}'">Cerrar sesión</button>
+            
         </nav>
         <p class="text-xl ml-15px-fr">Bienvenido <br><b> {{auth()->user()->name.' '.auth()->user()->apellidop}}</b></p>
     </div>

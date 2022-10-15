@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\registro;
+use Illuminate\Support\Facades\DB;
 
 class registroController extends Controller
 {
@@ -20,6 +21,18 @@ class registroController extends Controller
         $registroEstacionamiento->hora_salida=$request['hora_salida'];
         $registroEstacionamiento->save();
         echo($registroEstacionamiento);
-        return redirect()->to('/gestionestacionamientovaras');
+        return redirect()->to('/gestionestacionamientovaras')->with('success','Vehiculo guardado');
     }
+
+    public function update(Request $request){
+       
+        $patente = trim($request->get('patente'));
+
+        /*$registro=DB::table('registros')->select('hora_ingreso','nombre','rut')
+                                        ->where('patente','LIKE','%'.$patente.'%')
+                                        ->get();*/ 
+        $registro = registro::all();
+        //return view('gestionestacionamientovaras.index',compact('gestionestacionamientovaras'));
+    }
+
 }

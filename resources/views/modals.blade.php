@@ -9,7 +9,7 @@
                 <div class="button-modal">
                     <button class="button-modal-reg-veh"  id="open">Registrar salida</button>
 
-                    <form action="/gestionestacionamientovaras" method="POST"  role="form">
+                    <form action="/gestionestacionamientovaras" method="GET"  role="form">
 
                          {{csrf_field()}}
                     <div id="modal_container" class="modal_container_salida">
@@ -68,42 +68,44 @@
                 <!-- Modal 3 -->
             <!--  -->
                 <div class="button-modal">
-                    
-                    <div id="modal_container3" class="modal_container_entrada">
-                        <div class="modal3">
-                            <h1 class="h1-modal">Registro entrada</h1>
+                    <form action="/gestionestacionamientovaras" method="POST"  role="form">
+
+                        {{csrf_field()}}
+                   <div id="modal_container3" class="modal_container_entrada">
+
+                       <div class="modal">
+                           <h1 class="h1-modal">Registro entrada</h1>
+                           
+                           <div class="reg-busqueda">
+                               <label>Buscar patente</label>
+                               <input name="patente"  type="text" placeholder="XS6452">
+                               <button class="button-modal-reg-veh">Buscar</button>
+                           </div>
+
+                           <hr>
+
+                           <div class="reg-busqueda">
+                               <label>Hora Entrada: </label>
+                               <input name="hora_entrada"  type="time">
+                           </div>
+
+                           <div class="reg-busqueda">
+                               <label>Nombre: </label>
+                               <input name="nombre" type="text">
+                           </div>
+
+                           <div class="reg-busqueda">
+                               <label>Rut: </label>
+                               <input name="rut" type="text">
+                           </div>
+
+                           <div class="reg-busqueda-button">
+                               <button type="submit" class="button-modal-reg-veh" id="close">Registrar</button>
+                           </div>
+                           
+                       </div>
+                   </div>
+               </div>
                             
-                            <div class="reg-busqueda">
-                                <label>Buscar patente</label>
-                                <input class="input_reg_entrada"  type="text" placeholder="XS6452">
-                                <button class="button-modal-reg-veh">Buscar</button>
-                            </div>
-
-                            <hr>
-
-                            <div class="reg-busqueda">
-                                <label>Hora Entrada: </label>
-                                <input class="input_reg_entrada" type="time">
-                            </div>
-
-                            <div class="reg-busqueda">
-                                <label>Nombre: </label>
-                                <input class="input_reg_entrada" type="text">
-                            </div>
-
-                            <div class="reg-busqueda">
-                                <label>Rut: </label>
-                                <input class="input_reg_entrada" type="text">
-                            </div>
-
-                          
-
-                            <div class="reg-busqueda-button">
-                                <button type="submit" class="button-modal-reg-veh" id="close3">Registrar</button>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
+                           
             </div>
