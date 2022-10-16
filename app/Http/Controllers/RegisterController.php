@@ -4,15 +4,30 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
+
 class RegisterController extends Controller
 {
     public function create(){
         return view ('admin.gestionUsuario');
     }
 
-    public function store(){
-
+    public function store(Request $request){
+        $user = User::where('username', $request->username)->first();
+        echo ($user);
+        if ($user != null) {
+            return back()->withErrors([
+                'message' => 'Username existe, intente con otro',
+            ]);
+        }else{
+            $user = User::create(request(['name','apellidop','apellidom','rut','role','password','username']));
+        }
+       /* if (User::where('username', '=', Request::get('username'))->exists()) {
+            return back()->withErrors([
+                'message' => 'Username existe, intente con otro',
+            ]);
+         }else{
         $user = User::create(request(['name','apellidop','apellidom','rut','role','password','username']));
+         }
         
               /*auth()->Login($user);*/
         return redirect()->to('gestionUsuario');
@@ -31,7 +46,7 @@ class RegisterController extends Controller
 
     public function update(Request $request, $id){
         $users = User::find($id);
-        $users ->nombre = $request -> nombre;
+        $users ->nombre = $request -> name;
         $users->save();
         //return view('todos.index', ['success' => 'Tarea Actualizada']);
         return redirect()->route('admin.gestionUsuario')->with('success','Tarea Actializada');

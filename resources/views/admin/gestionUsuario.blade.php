@@ -1,10 +1,13 @@
 
     <!--==============CABECERA======================-->
     
-    @include("encabezado");
-    @include("headerMenu");
+    @include("encabezado")
+    @include("headerMenu")
     
     <!--================CUERPO======================-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     <main class="contenido-cuerpo">
         <section class="contenido-usuario">
             <div class="form-registro">
@@ -16,7 +19,7 @@
                             @csrf
                             <div class="inputs-form-reg-us">
                                 <Label>Nombre: </Label>
-                                <input type="name" id="name" name="name" placeholder="Ricardo" required>
+                                <input type="name" id="name" name="name" placeholder="Ricardo" required >
                             </div>
                             <div class="inputs-form-reg-us">
                                 <Label>Ap. Paterno: </Label>
@@ -44,15 +47,19 @@
                                 <label>Rol: </label>
                                 <select class="combolista" name="role" id='role' onchange="combo(this,'role')">
                                     <option value="operador">Operador</option>
-                                    <option value="administrador">Administrador</option>
+                                    <option value="admin">Administrador</option>
                                 </select>
                                 
 
                             </div>
+                            
                             <div class="inputs-form-reg-us">
                                 <button type="submit" class="button-reg">Registrar</button>
                             </div>
                         </form>
+                        @error('message')
+                            <p class="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">{{$message}}</p>
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -61,46 +68,39 @@
         <section class="user-grilla">
             <div class="contenido2">
                 <table class="table-grilla">
-                @foreach ($users as $user)
-                <div class="row py-1"><tr>
-                    <div class="col-md-9 d-flex align-items-center">
-                       <td><a href="{{ route('gestionUsuario-edit',['id' => $user->id])}}">{{ $user->name }}</a></td>
-                    </div>
-                    <div class="col-md-3 d-flex justify-content-end">
-                        <td><form action="{{ route('gestionUsuario-destroy', [$user->id]) }}" method="POST"></td>
-                        @method('DELETE')
-                        @csrf
-                        <button class="btn btn-danger btn-sm">Eliminar</button>
-                        </form>
-                    </div>
+                    <tr>
+                        <td class="title-table">Nombre</td>
+                        <td class="title-table">Apellido Paterno</td>
+                        <td class="title-table">Usuario</td>
                     </tr>
+                @foreach ($users as $user)
+                <div class="row py-1" ><tr>
+                    <div class="col-md-9 d-flex align-items-center" style="display:inline-flex">
+                        <td><a href="{{ route('gestionUsuario-edit',['id' => $user->id])}}">{{$user->name}}</a></td>
+                        <td><a href="{{ route('gestionUsuario-edit',['id' => $user->id])}}">{{$user->apellidop}}</a></td>
+                        <td><a href="{{ route('gestionUsuario-edit',['id' => $user->id])}}">{{$user->username}}</a></td>
+                        <td><form action="{{ route('gestionUsuario-destroy', [$user->id]) }}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
+                        </td></tr>
+                    </div>
+                    
+                    
                 </div>
                     
                 @endforeach
                 </table>
             </div>
-            <!--<div class="contenido2">
-                <table class="table-grilla">
-                    <tr>
-                        <td class="title-table">Nombre</td>
-                        <td class="title-table">Apellido Paterno</td>
-                        <td class="title-table">Apellido Materno</td>
-                        <td class="title-table">Rut</td>
-                        <td class="title-table">Usuario</td>
-                        <td class="title-table">Contraseña</td>
-                        <td class="title-table">Rol</td>
-                        <td><input type="button" class="Modificar" value="Modificar"></td>
-                        <td><input type="button" class="borrar" value="Eliminar"></td>
-                    </tr>
-                </table>
-            </div>-->
+            
             
         </section>
         
     </main>
     <!--================FOOTER======================-->
     
-        @include("footer");
+        @include("footer")
     
 
 
