@@ -38,4 +38,4 @@ Route::get('/gestionestacionamientovaras', [registroController::class, 'create']
 
 Route::post('/gestionestacionamientovaras',[registroController::class, 'store'])->name('gestionestacionamientovaras.store');
 
-Route::get('/gestionestacionamientovaras', [registroController::class, 'update'])->name('gestionestacionamientovaras.update');
+//Route::get('/gestionestacionamientovaras', [registroController::class, 'update'])->name('gestionestacionamientovaras.update');

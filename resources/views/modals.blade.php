@@ -9,10 +9,10 @@
                 <div class="button-modal">
                     <button class="button-modal-reg-veh"  id="open">Registrar salida</button>
 
-                    <form action="/gestionestacionamientovaras" method="GET"  role="form">
+                    <form action="/gestionestacionamientovaras" method="POST"  role="form">
 
                          {{csrf_field()}}
-                    <div id="modal_container" class="modal_container_salida">
+                     <div id="modal_container" class="modal_container_salida">
 
                         <div class="modal">
                             <h1 class="h1-modal">Registro salida</h1>
@@ -22,16 +22,14 @@
                                 <input name="patente"  type="text" placeholder="XS6452">
                                 <button class="button-modal-reg-veh">Buscar</button>
                             </div>
+
                             <hr>
-                            @foreach ($registro as $item)
-                                {{$registro}}
-                            @endforeach
-                            
+
                             <div class="reg-busqueda">
                                 <label>Hora Entrada: </label>
                                 <input name="hora_entrada"  type="time">
                             </div>
-                           
+
                             <div class="reg-busqueda">
                                 <label>Nombre: </label>
                                 <input name="nombre" type="text">
@@ -43,7 +41,7 @@
                             </div>
 
                             <div class="reg-busqueda">
-                                <label for="">Hora salida: </label>
+                                <label>Hora salida: </label>
                                 <input name="hora_salida" type="time">
                             </div>
 
@@ -52,7 +50,8 @@
                             </div>
                             
                         </div>
-                    </div>
+                     </div>
+                    </form>
                 </div>
 
                 <!--  -->
