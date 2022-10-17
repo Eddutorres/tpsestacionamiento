@@ -20,7 +20,7 @@ class registroController extends Controller
         $registroEstacionamiento->rut=$request['rut'];
         $registroEstacionamiento->hora_salida=$request['hora_salida'];
         $registroEstacionamiento->save();
-        return redirect()->to('/gestionestacionamientovaras')->with('success','Vehiculo guardado');
+        return view ('gestionestacionamientovaras')->with('success','Vehiculo guardado');
     }
 
     public function update(Request $request){
