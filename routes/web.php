@@ -43,3 +43,7 @@ Route::get('/gestionUsuario', [RegisterController::class, 'index'])
 Route::get('/gestionUsuario/{id}',[RegisterController::class, 'show'])->name('gestionUsuario-edit');
 Route::patch('/gestionUsuario/{id}',[RegisterController::class, 'update'])->name('gestionUsuario-update');
 Route::delete('/gestionUsuario/{id}',[RegisterController::class, 'destroy'])->name('gestionUsuario-destroy');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

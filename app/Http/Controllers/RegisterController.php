@@ -35,7 +35,7 @@ class RegisterController extends Controller
     }
 
     public function index(){
-        $users = User::all();
+        $users = User::orderBy('id')->paginate(5);
         return view('admin.gestionUsuario', ['users' => $users]);
     }
 
@@ -46,15 +46,21 @@ class RegisterController extends Controller
 
     public function update(Request $request, $id){
         $users = User::find($id);
-        $users ->nombre = $request -> name;
+        $users ->name = $request -> name;
+        $users ->apellidop = $request -> apellidop;
+        $users ->apellidom = $request -> apellidom;
+        $users ->rut = $request -> rut;
+        $users ->username = $request -> username;
+        $users ->password = $request -> password;
+        $users ->role = $request -> role;
         $users->save();
         //return view('todos.index', ['success' => 'Tarea Actualizada']);
-        return redirect()->route('admin.gestionUsuario')->with('success','Tarea Actializada');
+        return redirect()->to('gestionUsuario')->with('success','Usuario Actializado');
     }
 
     public function destroy($id){
         $users = User::find($id);
         $users->delete();
-        return redirect()->to('gestionUsuario')->with('success','Tarea Eliminada');
+        return redirect()->to('gestionUsuario')->with('destroy','Usuario Eliminado');
     }
 }
