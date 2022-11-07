@@ -13,7 +13,7 @@
                 
             
             
-            <a class="navegador" href="reportes">Reportes</a>
+            <a class="navegador" href="registros">Reportes</a>
             
         </nav>
         <p class="text-xl ml-15px-fr">Bienvenido <br><b> {{auth()->user()->name.' '.auth()->user()->apellidop}}</b></p>

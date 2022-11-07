@@ -1,13 +1,16 @@
 
-@include("encabezado");
+@include("encabezado")
 
-<body>
+
+    
     <header class="header">
         <div class="contenedor">
             <img class="logo" src="../img/tps_web2021.png" alt="logo">
         </div>
     </header>
+<body>
     <img class="fondo" src="../img/fondo.jpg" alt="fondo">
+    
     <main class="contenido">
         <section class="caja-form-login">
             <div class="login-page">
@@ -28,6 +31,6 @@
     </main>
     <!--FOOTER-->
     
-        @include("footer");
+        @include("footer")
 </body>
 

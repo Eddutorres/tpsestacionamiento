@@ -13,14 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('registros', function (Blueprint $table) {
-            $table->id();
+        //
+        Schema::create('registro1s', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->date('fecha');
+            $table->string('id_est');
             $table->time('hora_ingreso');
             $table->time('hora_salida');
-            $table->string('nombre');
             $table->string('rut');
             $table->string('patente');
             $table->timestamps();
+
+            $table->foreign('id_est')->references('id_est')->on('estacionamientos');
+            $table->foreign('rut')->references('rut')->on('personas');
+            $table->foreign('patente')->references('patente')->on('vehiculos');
+            
+
         });
     }
 
@@ -31,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('registros');
+        //
     }
 };
